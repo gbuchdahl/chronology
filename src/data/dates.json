@@ -1,0 +1,26 @@
+[
+    {
+        "date": "1939-08-23",
+        "title": "Molotov-Ribbentrop Pact",
+        "description": "lorem ipsum",
+        "citations": [],
+        "country": "Russia",
+        "tags": []
+    },
+    {
+        "date": "1938-03-12",
+        "title": "Anschluss",
+        "description": "lorem ipsum",
+        "citations": [],
+        "country": "Germany",
+        "tags": []
+    },
+    {
+        "date": "1921-03-18",
+        "title": "Treaty of Riga",
+        "description": "lorem ipsum",
+        "citations": [],
+        "country": "Poland",
+        "tags": []
+    }
+]
