@@ -1,4 +1,4 @@
-import data from './dates.json';
-import {DateProps} from '.././components/Date';
+import data from './data.json';
+import { DateProps } from '.././components/Date';
 
 export default data as DateProps[];

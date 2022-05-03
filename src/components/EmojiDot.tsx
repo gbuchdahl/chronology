@@ -1,6 +1,6 @@
-import  React from 'react';
+import React from 'react';
 import styled from '@emotion/styled'
-import TimelineDot  from '@mui/lab/TimelineDot';
+import TimelineDot from '@mui/lab/TimelineDot';
 import { Tooltip } from '@mui/material';
 
 
@@ -8,15 +8,21 @@ import { Tooltip } from '@mui/material';
 export enum EmojiEnum {
   'Russia' = '🇷🇺',
   'Germany' = '🇩🇪',
-  'Poland' = '🇵🇱'
+  'Poland' = '🇵🇱',
+  'Yugoslavia' = '🇭🇷',
+  'Czechoslovakia' = '🇨🇿',
+  'Ukraine' = '🇺🇦',
+  'Hungary' = '🇭🇺',
+  'Austria' = '🇦🇹',
+  'Multiple' = '🌎',
 };
 
-export type Emoji = keyof typeof EmojiEnum;
+export type Country = keyof typeof EmojiEnum;
 
 
 type Props = {
-    emoji: Emoji
-    color?: 'white'
+  emoji: Country
+  color?: 'white'
 }
 
 
@@ -36,9 +42,9 @@ const Color = styled.div`
 const EmojiDot = (props: Props) => <Color>
   <TimelineDot color='inherit' variant='outlined'>
     <Tooltip title={props.emoji}>
-          <EmojiDiv>{EmojiEnum[props.emoji]}</EmojiDiv>
+      <EmojiDiv>{EmojiEnum[props.emoji]}</EmojiDiv>
     </Tooltip>
-</TimelineDot>
+  </TimelineDot>
 
 </Color>
 

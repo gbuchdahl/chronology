@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import MainTimeline from './MainTimeline';
 import { Typography } from '@mui/material';
@@ -24,7 +24,7 @@ function App() {
         Gabriel Buchdahl
       </Typography>
       <div className='d-flex flex-row justify-content-center pt-5'>
-        <Cover src={isMouseOver ? after : before} onMouseEnter={() => setMouseOver(true)} onMouseLeave={()=> setMouseOver(false)} className='img-fluid col-8 ' alt='Before'/>
+        <Cover src={isMouseOver ? after : before} onMouseEnter={() => setMouseOver(true)} onMouseLeave={() => setMouseOver(false)} className='img-fluid col-8 ' alt='Before' />
       </div>
       <div className='row  justify-content-center'>
         <Typography variant='body1' className='mt-5 mb-5 col-8 col-lg-5 text-left'>
@@ -32,7 +32,7 @@ function App() {
         </Typography>
       </div>
 
-      <MainTimeline/>
+      <MainTimeline />
     </div>
   );
 }
