@@ -69,6 +69,7 @@ const MainTimeline = (props: Props) => {
     return (
         <React.Fragment>
             <Typography className='mb-4' variant='h2'>Timeline</Typography>
+            <Typography className='mt-3 mb-5' color={'gray'}>Displaying {filteredData.length} dates</Typography>
             <div className='d-flex flex-row justify-content-center mb-4'>
                 <Accordion className='col-10 col-md-4' elevation={2}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -102,7 +103,6 @@ const MainTimeline = (props: Props) => {
                     </AccordionDetails>
                 </Accordion>
             </div>
-
 
             <Timeline>
                 <div className='d-flex flex-column'>
