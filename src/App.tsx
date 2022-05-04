@@ -33,6 +33,7 @@ function App() {
       </div>
 
       <MainTimeline />
+      <div className='p-5 mt-5'>A project done for Yale's HIST 264 class.</div>
     </div>
   );
 }

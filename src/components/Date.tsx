@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import moment from 'moment';
 import { Country } from './EmojiDot'
 import TitleAndDesc from "./TitleAndDesc";
+import { Tag } from '../MainTimeline'
 
 export type DateProps = {
     date: string;
@@ -14,7 +15,8 @@ export type DateProps = {
     citations: string;
     quoteCitation: string | null;
     country: Country;
-    tags: string;
+    tag: Tag | null;
+    isLast?: boolean;
 }
 
 const TallDiv = styled.div`
@@ -29,7 +31,7 @@ const Date = (props: DateProps) => {
     const date = moment(props.date);
     const dateStr = date.format('MMMM D, YYYY');
     return (
-        <div className='col-12 col-md-10 col-lg-9 col-xl-7'>
+        <div className='col-12 col-md-10 col-xl-8'>
             <TimelineItem>
                 <TimelineOppositeContent className="pt-4 flex-grow-0" style={{ minWidth: '200px' }}>
                     {dateStr}
@@ -37,9 +39,9 @@ const Date = (props: DateProps) => {
 
                 <TimelineSeparator>
                     <EmojiDot emoji={props.country} />
-                    <TallDiv>
+                    {!props.isLast && <TallDiv>
                         <TimelineConnector className="flex-grow-1" />
-                    </TallDiv>
+                    </TallDiv>}
                 </TimelineSeparator>
                 <TitleAndDesc title={props.title} description={props.description} citations={props.citations} quote={props.quote} quoteCitation={props.quoteCitation} />
 
